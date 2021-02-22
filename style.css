@@ -1,0 +1,27 @@
+.box {
+    width: 100vw;
+    height: 400px;
+    background-color: red;
+    position: relative;
+    padding: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+.drop-menu {
+    width: 450px;
+    height: 150px;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    background-color: orange;
+    transition-duration: 1.5s;
+    top: -250px;
+    opacity: 0;
+}
+
+.drop-d-block {
+    top: 0;
+    opacity: 1;
+}
