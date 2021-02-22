@@ -8,14 +8,21 @@
     justify-content: center;
 }
 
+.text {}
 
 .drop-menu {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    font-size: 32px;
+    padding-top: 20px;
+    text-align: center;
     width: 450px;
     height: 150px;
     position: absolute;
     justify-content: space-between;
     align-items: center;
-    background-color: orange;
+    background-color: rgb(89, 0, 255);
     transition-duration: 1.5s;
     top: -250px;
     opacity: 0;
