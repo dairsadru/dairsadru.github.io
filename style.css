@@ -109,3 +109,23 @@ span {
         height: 250px;
     }
 }
+
+.form {
+    color: white;
+    margin-left: 40px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 30px;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}

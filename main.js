@@ -52,3 +52,21 @@ function changePrev() {
     }
     slider.src = images[num]
 }
+
+let inp1 = document.getElementById("inp1");
+let inp2 = document.getElementById("inp2");
+
+let valid = document.getElementById("formValidate");
+
+valid.addEventListener("submit", checkout);
+
+function checkout() {
+    if (inp1.value != "" && inp2 != "") {
+        if (inp1.value === inp2.value) {
+            alert("Пароли совпадают")
+            return true;
+        }
+        alert("Проверьте правильность пароли");
+        return false;
+    }
+}
