@@ -3,14 +3,40 @@
     padding: 0;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .box {
     width: 100vw;
-    height: 400px;
+    height: 200px;
     background-color: red;
     position: relative;
     padding: 0 auto;
     display: flex;
     justify-content: center;
+}
+
+.btn {
+    width: 200px;
+    padding: 10px 10px;
+    color: rgb(51, 28, 28);
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(204, 195, 195);
+    text-align: center;
+    outline: none;
+    border: 1px solid rgb(175, 171, 171);
+    border-radius: 3px;
+    transition-duration: 0.3s;
+}
+
+.btn:active {
+    background-color: black;
+    color: white;
 }
 
 
@@ -22,7 +48,7 @@
     padding-top: 20px;
     text-align: center;
     width: 450px;
-    height: 150px;
+    height: 120px;
     position: absolute;
     justify-content: space-between;
     align-items: center;
@@ -30,6 +56,10 @@
     transition-duration: 1.5s;
     top: -250px;
     opacity: 0;
+}
+
+span {
+    color: rgb(255, 175, 1)
 }
 
 .drop-d-block {
