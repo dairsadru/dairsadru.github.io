@@ -106,7 +106,6 @@ span {
 
 @media (max-width: 600px) {
     .img {
-        width: 100vw;
         height: 250px;
     }
 }
