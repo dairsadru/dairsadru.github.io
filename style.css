@@ -39,6 +39,19 @@
     color: white;
 }
 
+.btn-car {
+    width: 30px;
+    height: 23px;
+    position: relative;
+}
+
+.btn-left {
+    left: 60px;
+}
+
+.btn-right {
+    right: 60px;
+}
 
 .drop-menu {
     text-transform: uppercase;
@@ -58,6 +71,10 @@
     opacity: 0;
 }
 
+.img {
+    width: 100vw;
+}
+
 span {
     color: rgb(255, 175, 1)
 }
@@ -65,4 +82,10 @@ span {
 .drop-d-block {
     top: 0;
     opacity: 1;
+}
+
+.container-carousel {
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
