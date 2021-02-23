@@ -2,17 +2,24 @@
 
 
 let btn = document.getElementById("demo");
+let cont = document.getElementById("cont");
 
 
-console.log(btn.classList);
+cont.addEventListener("click", removeClass);
 
 let dropMenu = document.getElementById("drop");
-
 btn.addEventListener("click", dBlock);
 
 function dBlock() {
     dropMenu.classList.add("drop-d-block");
 }
+
+function removeClass() {
+    dropMenu.classList.remove("drop-d-block");
+}
+
+
+//слайдер
 let images = [
     "https://img.unibo.ru/foto/message_fotos/233/2336117/foto_largest.jpg",
     "https://alliance-catalog.ru/uploads/user/origins/2018/821cd60458be199980c4b870c3c530d3.jpg",
