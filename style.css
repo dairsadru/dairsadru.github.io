@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    background-color: orange;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -12,7 +16,7 @@
 
 .box {
     width: 100vw;
-    height: 130px;
+    height: 60px;
     background-color: red;
     position: relative;
     padding: 0 auto;
@@ -22,9 +26,9 @@
 
 .btn {
     width: 200px;
-    padding: 10px 10px;
+    padding: 7px 7px;
     color: rgb(51, 28, 28);
-    font-size: 20px;
+    font-size: 8px;
     font-weight: 700;
     background-color: rgb(204, 195, 195);
     text-align: center;
@@ -41,27 +45,26 @@
 
 .btn-car {
     width: 30px;
-    height: 23px;
     position: relative;
 }
 
 .btn-left {
-    left: 60px;
+    left: 30px;
 }
 
 .btn-right {
-    right: 60px;
+    right: 30px;
 }
 
 .drop-menu {
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 400;
     color: white;
-    font-size: 32px;
-    padding-top: 20px;
+    font-size: 16px;
+    padding-top: 10px;
     text-align: center;
-    width: 450px;
-    height: 120px;
+    width: 100vw;
+    height: 40px;
     position: absolute;
     justify-content: space-between;
     align-items: center;
