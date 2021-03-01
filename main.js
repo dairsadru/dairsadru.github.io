@@ -11,7 +11,7 @@ let dropMenu = document.getElementById("drop");
 btn.addEventListener("click", dBlock);
 
 function dBlock() {
-    dropMenu.classList.add("drop-d-block");
+    dropMenu.classList.toggle("drop-d-block");
 }
 
 function removeClass() {
@@ -24,7 +24,6 @@ let images = [
     "https://img.unibo.ru/foto/message_fotos/233/2336117/foto_largest.jpg",
     "https://alliance-catalog.ru/uploads/user/origins/2018/821cd60458be199980c4b870c3c530d3.jpg",
     "https://next-gazel.ru/sites/default/files/gazel-nekst-samosval-prezentaciya.jpg",
-    "https://lh3.googleusercontent.com/proxy/5PcKBiDo93vPDoDEbSLNqnaxoTNugdE__IyvU7ZU9rNMtJAwb-a2nEzjhZNus4hZtT_XmAFY3Xj_wFqyZWN88WJ7NFZx5-FCTgGi7J3Vxd2EmNzXpGu5GcSLF-oMboB_17ltBQb6SkIn-Q_YBqU9wSHjhA48Mk5WkaBqnnGMoEfFLZ8lcGACGe8",
 ];
 
 let btnLeft = document.getElementById("btn-left")
@@ -53,20 +52,24 @@ function changePrev() {
     slider.src = images[num]
 }
 
-let inp1 = document.getElementById("inp1");
-let inp2 = document.getElementById("inp2");
+//likes
 
-let valid = document.getElementById("formValidate");
+const likeElems = document.querySelectorAll("i");
 
-valid.addEventListener("submit", checkout);
+likeElems.forEach((likeEl) => {
+    likeEl.addEventListener("click", addLike);
+})
 
-function checkout() {
-    if (inp1.value != "" && inp2 != "") {
-        if (inp1.value === inp2.value) {
-            alert("Пароли совпадают")
-            return true;
-        }
-        alert("Проверьте правильность пароли");
-        return false;
+/**@param {MouseEvent} event */
+function addLike(event) {
+    let likeEl = event.target;
+    let zeroLikesHeart = likeEl.classList.contains("far");
+    if (zeroLikesHeart) {
+        likeEl.classList.remove("far");
+        likeEl.classList.add("fas");
+    } else {
+        likeEl.classList.remove("fas");
+        likeEl.classList.add("far");
     }
+
 }
