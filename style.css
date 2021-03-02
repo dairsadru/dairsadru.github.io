@@ -243,8 +243,13 @@ i {
         margin-bottom: 10px;
     }
 
+    .fas,
+    .far {
+        line-height: 0;
+    }
+
     .product {
-        padding: 2px 20px 20px;
+        padding: 2px 20px 10px;
         width: 100%;
     }
 
