@@ -71,5 +71,91 @@ function addLike(event) {
         likeEl.classList.remove("fas");
         likeEl.classList.add("far");
     }
+}
 
+//sort
+
+const products = document.querySelectorAll(".product");
+
+
+let fromInput = document.getElementById("from");
+fromInput.addEventListener("change", changePriceHadller);
+
+let toInput = document.getElementById("to");
+toInput.addEventListener("change", changePriceHadller);
+
+function changePriceHadller() {
+    const fromPrice = fromInput.value;
+    const toPrice = toInput.value;
+
+    if (fromPrice === "" && toPrice === "") {
+        reset();
+    } else if (fromPrice !== "" && toPrice === "") {
+        showProductWithFromPrice();
+    } else if (fromPrice === "" && toPrice !== "") {
+        showProductWithToPrice();
+    } else if (fromPrice !== "" && toPrice !== "") {
+        showProductWithBothPrices();
+    }
+}
+
+function hideProduct(product) {
+    product.style.display = "none";
+}
+
+function showProduct(product) {
+    product.style.display = "block";
+}
+
+function isProductHidden(product) {
+    return product.style.opacity === "none";
+}
+
+function reset() {
+    products.forEach(function (product) {
+        if (isProductHidden(product)) {
+            showProduct(product);
+        }
+    })
+}
+
+function showProductWithFromPrice() {
+    const fromPrice = Number(fromInput.value);
+    products.forEach(function (product) {
+        const productPrice = Number(product.querySelector("span").textContent.trim());
+        if (productPrice < fromPrice) {
+            hideProduct(product);
+        } else {
+            showProduct(product);
+        }
+    });
+}
+
+function showProductWithToPrice() {
+    const toPrice = Number(toInput.value);
+    products.forEach(function (product) {
+        const productPrice = Number(product.querySelector("span").textContent.trim());
+        if (productPrice > toPrice) {
+            hideProduct(product);
+        } else {
+            showProduct(product);
+        }
+    });
+}
+
+function showProductWithBothPrices() {
+    const fromPrice = Number(fromInput.value);
+    const toPrice = Number(toInput.value);
+    if (fromPrice > toPrice) {
+        alert("Цена ОТ не может быть больше чем цена  ДО.");
+        return;
+    }
+    products.forEach(function (product) {
+        const productPrice = Number(product.querySelector("span").textContent.trim());
+        if (productPrice >= fromPrice && productPrice <= toPrice) {
+            showProduct(product);
+        } else {
+            hideProduct(product);
+        }
+    })
 }
