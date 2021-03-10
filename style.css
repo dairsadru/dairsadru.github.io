@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    color: beige;
+}
+
 body {
     background-color: rgb(65, 90, 66);
 }
@@ -26,6 +33,8 @@ body {
     height: 40px;
     background-color: rgb(53, 47, 47);
     position: relative;
+
+    box-shadow: 1px 0 3px beige;
 }
 
 .logo-text {
@@ -42,7 +51,7 @@ body {
 
 
 .btn {
-    box-shadow: 0 0 10px beige;
+    box-shadow: 0 0 5px beige;
     width: 200px;
     color: rgb(255, 255, 255);
     font-size: 12px;
@@ -56,8 +65,9 @@ body {
 }
 
 .bidon {
+    font-size: 11px;
     border-radius: 50%;
-    box-shadow: 0 0 10px beige;
+    box-shadow: 0 0 5px beige;
     right: -120px;
     position: relative;
     top: -22px;
@@ -112,6 +122,8 @@ body {
 .img {
     width: 75%;
     border-radius: 50%;
+    box-shadow: 0 0 10px rgb(3, 3, 3);
+    object-fit: cover;
 }
 
 span {
@@ -208,6 +220,8 @@ span {
 
 .product-img {
     width: 100%;
+
+    box-shadow: 0 0 10px rgb(3, 3, 3);
 }
 
 @media (max-width: 450px) {
