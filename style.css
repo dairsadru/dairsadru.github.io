@@ -83,6 +83,7 @@ body {
 
 .btn-car {
     width: 30px;
+    height: 30px;
     position: relative;
     border-radius: 50%;
     display: block;
@@ -90,15 +91,26 @@ body {
 
 .btn-car i {
     margin-right: 8px;
+
 }
 
 
 .btn-left {
     left: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 .btn-right {
     right: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 .drop-menu {
