@@ -159,3 +159,34 @@ function showProductWithBothPrices() {
         }
     })
 }
+
+let valButton = document.getElementById("valBut");
+let valInput = document.getElementById("valInp");
+let valDiv = document.getElementById('dv')
+
+
+valButton.addEventListener("click", function () {
+    if (/\d/.test(valInput.value)) {
+        valDiv.style.display = "none";
+    } else {
+        valDiv.style.display = 'block';
+    }
+
+});
+$(document).ready(function () {
+    $(".bidon").addClass("hidden").viewportChecker({
+        classToAdd: 'animated slideInUp',
+        offset: 100,
+        classToRemove: 'hidden'
+    })
+    $(".product").addClass("hidden").viewportChecker({
+        classToAdd: 'animated zoomInDown',
+        offset: 100,
+        classToRemove: 'hidden'
+    })
+    $(".par").addClass("hidden").viewportChecker({
+        classToAdd: 'animated rollIn',
+        offset: 100,
+        classToRemove: 'hidden'
+    })
+});
