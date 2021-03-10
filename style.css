@@ -42,6 +42,7 @@ body {
 
 
 .btn {
+    box-shadow: 0 0 10px beige;
     width: 200px;
     color: rgb(255, 255, 255);
     font-size: 12px;
@@ -56,6 +57,7 @@ body {
 
 .bidon {
     border-radius: 50%;
+    box-shadow: 0 0 10px beige;
     right: -120px;
     position: relative;
     top: -22px;
