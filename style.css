@@ -7,11 +7,16 @@ h1,
 h2,
 h3,
 h4 {
-    color: beige;
+    color: rgb(93, 93, 28);
 }
+
 
 body {
     background-color: rgb(65, 90, 66);
+    background-image: url(images/bg.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+
 }
 
 .container {
