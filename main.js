@@ -181,17 +181,17 @@ valButton.addEventListener("click", function () {
 });
 $(document).ready(function () {
     $(".bidon").addClass("hidden").viewportChecker({
-        classToAdd: 'animated slideInUp',
+        classToAdd: 'animate__animated animate__rollIn animate__duration-2s',
         offset: 100,
         classToRemove: 'hidden'
     })
     $(".product").addClass("hidden").viewportChecker({
-        classToAdd: 'animated zoomInDown',
+        classToAdd: 'animate__animated animate__fadeInUp',
         offset: 100,
         classToRemove: 'hidden'
     })
     $(".par").addClass("hidden").viewportChecker({
-        classToAdd: 'animated rollIn',
+        classToAdd: 'animate__animated animate__fadeInUp',
         offset: 100,
         classToRemove: 'hidden'
     })
