@@ -12,10 +12,16 @@ btn.addEventListener("click", dBlock);
 
 function dBlock() {
     dropMenu.classList.toggle("drop-d-block");
+    if (drop.classList.contains("drop-d-block")) {
+        btn.innerHTML = "&times";
+    } else {
+        btn.innerHTML = "Чудеса"
+    }
 }
 
 function removeClass() {
     dropMenu.classList.remove("drop-d-block");
+    btn.innerHTML = "Вот это да"
 }
 
 
